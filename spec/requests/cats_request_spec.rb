@@ -85,9 +85,9 @@ RSpec.describe "Cats", type: :request do
       }
     }
     post '/cats', params: cat_params
-    json = JSON.parse(response.body)
+    cat = JSON.parse(response.body)
 
-    expect(json['name']).to include "can't be blank"
+    expect(cat['name']).to include "can't be blank"
     expect(response).to have_http_status(422)
   end
 
@@ -99,9 +99,9 @@ RSpec.describe "Cats", type: :request do
       }
     }
     post '/cats', params: cat_params
-    json = JSON.parse(response.body)
+    cat = JSON.parse(response.body)
 
-    expect(json['age']).to include "can't be blank"
+    expect(cat['age']).to include "can't be blank"
     expect(response).to have_http_status(422)
   end
 
@@ -113,9 +113,9 @@ RSpec.describe "Cats", type: :request do
       }
     }
     post '/cats', params: cat_params
-    json = JSON.parse(response.body)
+    cat = JSON.parse(response.body)
 
-    expect(json['enjoys']).to include "can't be blank"
+    expect(cat['enjoys']).to include "can't be blank"
     expect(response).to have_http_status(422)
   end
 
