@@ -1,24 +1,9 @@
-# README
+# Cat Tinder
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+- $ rails routes - will show all the routes associated with a resource
 
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+- $ rails new cat-tinder-backend -d postgresql -T
+- $ rails db:create
+- $ bundle add rspec-rails
+- $ rails generate rspec:install
+- $ rails generate resource Cat name:string age:integer enjoys:text
